@@ -157,6 +157,7 @@ void IoTScapeService::handleMessage(JsonDocument * msg){
       
       delete response;
     } else {
+      Serial.printf("Unknown command %s received!\n", (*msg)["function"]);
       return;
     }
     
